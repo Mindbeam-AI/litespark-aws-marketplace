@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "text": "Sample training document content showing expected format for pretraining",
+      "format": "parquet",
+      "batch_size": 8
+    }
+  ],
+  "params": {
+    "model_name": "mindbeam-2k"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "batch_data": [
+    {
+      "text": "First document for batch processing...",
+      "format": "parquet"
+    },
+    {
+      "text": "Second document in batch...",
+      "format": "parquet" 
+    }
+  ],
+  "batch_params": {
+    "model_name": "mindbeam-2k",
+    "batch_size": 8
+  }
+}
