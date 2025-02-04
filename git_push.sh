@@ -20,6 +20,9 @@ git config --global user.email rahat.moin90@gmail.com
 # Add all files
 echo "Adding files..."
 git add .
+git add -f tokenizer/*  # In case tokenizer is in .gitignore
+echo "data/" > .gitignore
+echo "logs/" >> .gitignore
 
 # Commit with provided message
 echo "Committing with message: $COMMIT_MSG"
