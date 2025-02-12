@@ -4,7 +4,7 @@ Mindbeam's Lepton is a quantum-inspired algorithm that offers accelerated pre-tr
 ## Prerequisites
 To use Lepton LLM Pre-training, make sure that
 - Your IAM role has *AmazonSageMakerFullAccess*.
-- Either your AWS account has a subscription to [Lepton - LLM Pre-Training v1.1](https://aws.amazon.com/marketplace/pp/prodview-pmofsct5z6s6s).
+- Either your AWS account has a subscription to [Lepton - LLM Pre-Training v1.2](https://aws.amazon.com/marketplace/pp/prodview-pmofsct5z6s6s).
 - Or your IAM role has these three permissions and you have authority to make AWS Marketplace subscriptions in the AWS account used:
   - *aws-marketplace:ViewSubscriptions*
   - *aws-marketplace:Unsubscribe*
