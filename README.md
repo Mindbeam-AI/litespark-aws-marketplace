@@ -14,7 +14,7 @@ To use Lepton LLM Pre-training, make sure that
 - Log in to your AWS console.
 - Go to Amazon SageMaker AI > Training > Algorithms.
 - Go to AWS Marketplace subscriptions.
-- Select Lepton - LLM Pre-Training v1.1, click on Actions > Create training job.
+- Select Lepton - LLM Pre-Training v1.2, click on Actions > Create training job.
 - In Job settings, give a Job name, select an appropriate IAM role that has the *AmazonSageMakerFullAccess* IAM policy attached (e.g. SageMaker-SageMakerOps).
 - In Algorithm source, select "An algorithm subscription from AWS Marketplace".
 - Under "Choose an algorithm subscription", select Lepton - LLM Pre-Training v1.1.
@@ -25,10 +25,6 @@ To use Lepton LLM Pre-training, make sure that
 - Under "Network", check "Enable network isolation".
 
 ### Hyperparameters
-- WANDB_API_KEY: Your WandB API key, necessary for logging metrics to the WandB dashboard.
-- WANDB_MODE: online/offline. The logs are saved to your local directory. Choose "online" if you want to upload the logs and visualize metrics in the WandB dashboard as well.
-- WANDB_PROJECT: name of the WandB project where logs/metrics are uploaded.
-- WANDB_NAME: name of the WandB run under the project.
 - RESUME: "false" or "<your/checkpoint/dir>". Choose "false" if training is expected to start from the beginning, choose <your/checkpoint/dir> to resume training from a particular checkpoint.
 - GLOBAL_BATCH_SIZE: the total number of samples processed before a model update, default is 512.
 - MICRO_BATCH_SIZE: the number of samples processed in a single forward/backward pass on each GPU, default is 8.
@@ -56,6 +52,6 @@ After the above steps are completed, click on "Create training job".
 ## Monitor a training job
 - After a training job is created, you can view the progress at Amazon SageMaker AI > Training jobs.
 - Click on the job name to view the details.
+- View metrics in the Monitor section.
 - To view logs in Cloud Watch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
-- If you provided a valid WandB API key and chose "online" for WANDB_MODE, you should be able to see the logs and metrics in the WandB dashboard as well.
 - Checkpoints and outputs will be saved in your specified S3 bucket.
