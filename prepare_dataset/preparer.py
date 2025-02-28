@@ -17,7 +17,7 @@ import time
 # DEFAULTS
 # =========
 # Initialize only the ones with defaults
-TOKENIZER_PATH = Path('tokenizer/pints')
+TOKENIZER_PATH = Path('tokenizer/lepton')
 
 # `CHUNK_SIZE` refers to the number of tokens to pack into 1 file.
 # This should be the (context window + 1) * n, where n is just to define how much to pack into a file.
