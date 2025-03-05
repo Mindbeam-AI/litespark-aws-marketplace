@@ -25,7 +25,6 @@ To use Lepton LLM Pre-training, make sure that
 - Under "Network", check "Enable network isolation".
 
 ### Hyperparameters
-- RESUME: "false" or "<your/checkpoint/dir>". Choose "false" if training is expected to start from the beginning, choose <your/checkpoint/dir> to resume training from a particular checkpoint.
 - GLOBAL_BATCH_SIZE: the total number of samples processed before a model update, default is 512.
 - MICRO_BATCH_SIZE: the number of samples processed in a single forward/backward pass on each GPU, default is 8.
 - LEARNING_RATE: maximum learning rate with a cosine scheduler, default is 1.6e-3.
@@ -37,6 +36,8 @@ To use Lepton LLM Pre-training, make sure that
 - GRAD_CLIP: clip gradients above the threshold, default is 1.0.
 - MIN_LR: minimum learning rate at the end of training, default is 4e-4.
 - MODEL_NAME: default model is "mindbeam-2k". Keep this model for now, additional models will be available in future releases.
+- SAVE_STEP_INTERVAL: number of steps after which checkpoint is saved periodically.
+- EVAL_STEP_INTERVAL: number of steps after which model is validated.
 
 ### Data preparation
 Any LLM pre-training dataset from Hugging Face can be prepared for training with Lepton using the accompanying notebook [dataprep.ipynb](https://github.com/Mindbeam-AI/lepton-aws-marketplace/blob/main/dataprep.ipynb). We recommend the [Expository-Prose-V1](https://huggingface.co/datasets/pints-ai/Expository-Prose-V1) dataset. The notebook downloads the raw dataset from Hugging Face to a local directory, prepares the dataset with appropriate tokenization, and uploads the prepared data to your specified S3 bucket.
