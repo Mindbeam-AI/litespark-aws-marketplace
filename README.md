@@ -14,10 +14,10 @@ To use Lepton LLM Pre-training, make sure that
 - Log in to your AWS console.
 - Go to Amazon SageMaker AI > Training > Algorithms.
 - Go to AWS Marketplace subscriptions.
-- Select Lepton - LLM Pre-Training v1.2, click on Actions > Create training job.
+- Select Mindbeam: Pre-Training LLM Optimization Consultation, click on Actions > Create training job.
 - In Job settings, give a Job name, select an appropriate IAM role that has the *AmazonSageMakerFullAccess* IAM policy attached (e.g. SageMaker-SageMakerOps).
 - In Algorithm source, select "An algorithm subscription from AWS Marketplace".
-- Under "Choose an algorithm subscription", select Lepton - LLM Pre-Training v1.1.
+- Under "Choose an algorithm subscription", select Mindbeam: Pre-Training LLM Optimization Consultation.
 - Under "Resource configuration", select either `ml.p4de.24xlarge` or `ml.p5.48xlarge` as instance type, instance count 1, and 1 GB additional storage volume per instance.
 - Optionally, select a "Keep alive period" in between 1 minutes and 60 minutes.
 - Under "Encryption key", select "No Custom Encryption".
