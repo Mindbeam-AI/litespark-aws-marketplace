@@ -40,7 +40,7 @@ To use Lepton LLM Pre-training, make sure that
 - EVAL_STEP_INTERVAL: number of steps after which model is validated.
 
 ### Data preparation
-Any LLM pre-training dataset from Hugging Face can be prepared for training with Lepton using the accompanying notebook [dataprep.ipynb](https://github.com/Mindbeam-AI/lepton-aws-marketplace/blob/main/dataprep.ipynb). We recommend the [Expository-Prose-V1](https://huggingface.co/datasets/pints-ai/Expository-Prose-V1) dataset. The notebook downloads the raw dataset from Hugging Face to a local directory, prepares the dataset with appropriate tokenization, and uploads the prepared data to your specified S3 bucket.
+Any LLM pre-training dataset from Hugging Face can be prepared for training with Lepton using the accompanying notebook [dataprep.ipynb](https://github.com/Mindbeam-AI/lepton-aws-marketplace/blob/main/dataprep.ipynb). The notebook downloads the raw dataset from Hugging Face to a local directory, prepares the dataset with appropriate tokenization, and uploads the prepared data to your specified S3 bucket.
 
 ### Data configuration
 - Under Input data configuration, the default is only one channel named "train".
@@ -53,6 +53,6 @@ After the above steps are completed, click on "Create training job".
 ## Monitor a training job
 - After a training job is created, you can view the progress at Amazon SageMaker AI > Training jobs.
 - Click on the job name to view the details.
-- View metrics in the Monitor section.
+- View metrics in the Monitor section. The following metrics are shown: CPU Utilization, GPU Utilization, Memory Utilization, Disk Utilization, GPU Memory Utilization, batches_per_sec (per GPU), flops_per_sec (per GPU), (training) loss, samples_per_sec (per GPU), model_efficienty (model flops utilization per GPU), tokens_per_sec (per GPU).
 - To view logs in Cloud Watch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
-- Checkpoints and outputs will be saved in your specified S3 bucket.
+- Checkpoints and outputs will be saved in your specified S3 bucket as safetensors.
