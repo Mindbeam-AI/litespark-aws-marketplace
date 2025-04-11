@@ -14,8 +14,8 @@ fi
 COMMIT_MSG="$1"
 
 # Configure git credentials
-git config --global user.name "moinulrahat"
-git config --global user.email rahat.moin90@gmail.com
+git config --global user.name "your_user_name"
+git config --global user.email <your_email>
 
 # Add all files
 echo "Adding files..."
