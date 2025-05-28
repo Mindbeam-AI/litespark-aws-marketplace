@@ -1,5 +1,5 @@
 # Mindbeam Litespark LLM Pre-training
-Mindbeam's Litespark is an advanced algorithm that offers accelerated pre-training of large anguage models. This repository shows how to use the algorithm from AWS marketplace to train a model using data from Hugging Face.
+Mindbeam's Litespark is an advanced algorithm that offers accelerated pre-training of large language models. This repository shows how to use the algorithm from AWS marketplace to train a model using data from Hugging Face.
 
 ## Prerequisites
 To use Litespark LLM Pre-training, make sure that
