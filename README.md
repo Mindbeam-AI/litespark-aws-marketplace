@@ -1,8 +1,8 @@
-# Mindbeam Lepton LLM Pre-training
-Mindbeam's Lepton is a quantum-inspired algorithm that offers accelerated pre-training of large anguage models. This repository shows how to use the algorithm from AWS marketplace to train a model using data from Hugging Face.
+# Mindbeam Litespark LLM Pre-training
+Mindbeam's Litespark is an advanced algorithm that offers accelerated pre-training of large anguage models. This repository shows how to use the algorithm from AWS marketplace to train a model using data from Hugging Face.
 
 ## Prerequisites
-To use Lepton LLM Pre-training, make sure that
+To use Litespark LLM Pre-training, make sure that
 - Your IAM role has *AmazonSageMakerFullAccess*.
 - Either your AWS account has a subscription to [Mindbeam: Pre-Training LLM Optimization Consultation](https://aws.amazon.com/marketplace/pp/prodview-hsoxija73l6xs?applicationId=AWSMPContessa&ref_=beagle&sr=0-1).
 - Or your IAM role has these three permissions and you have authority to make AWS Marketplace subscriptions in the AWS account used:
@@ -40,7 +40,7 @@ To use Lepton LLM Pre-training, make sure that
 - EVAL_STEP_INTERVAL: number of steps after which model is validated.
 
 ### Data preparation
-Any LLM pre-training dataset from Hugging Face can be prepared for training with Lepton using the accompanying notebook [dataprep.ipynb](https://github.com/Mindbeam-AI/lepton-aws-marketplace/blob/main/dataprep.ipynb). The notebook downloads the raw dataset from Hugging Face to a local directory, prepares the dataset with appropriate tokenization, and uploads the prepared data to your specified S3 bucket.
+Any LLM pre-training dataset from Hugging Face can be prepared for training with Litespark using the accompanying notebook [dataprep.ipynb](https://github.com/Mindbeam-AI/Litespark-aws-marketplace/blob/main/dataprep.ipynb). The notebook downloads the raw dataset from Hugging Face to a local directory, prepares the dataset with appropriate tokenization, and uploads the prepared data to your specified S3 bucket.
 
 ### Data configuration
 - Under Input data configuration, the default is only one channel named "train".
