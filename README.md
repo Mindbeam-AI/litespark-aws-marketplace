@@ -47,7 +47,7 @@ To use Litespark LLM Pre-training, make sure that
 - CHECKPOINT_INTERVAL: number of steps after which checkpoint is saved periodically, default is 1000.
 
 ### Data preparation
-Any LLM pre-training dataset from Hugging Face can be prepared for training with Litespark using the accompanying script [prepare_data.py](https://github.com/Mindbeam-AI/Litespark-aws-marketplace/blob/main/prepare_data.py). The scripts downloads the raw dataset from Hugging Face to a local directory and prepares the dataset with appropriate tokenization. To upload the prepared data to your specified S3 bucket, use the script [upload_to_s3.py](https://github.com/Mindbeam-AI/Litespark-aws-marketplace/blob/main/upload_to_s3.py).
+Any LLM pre-training dataset from Hugging Face can be prepared for training with Litespark using the accompanying script [prepare_data.py](https://github.com/Mindbeam-AI/Litespark-aws-marketplace/blob/main/prepare_dataset/prepare_data.py). The scripts downloads the raw dataset from Hugging Face to a local directory and prepares the dataset with appropriate tokenization. To upload the prepared data to your specified S3 bucket, use the script [upload_to_s3.py](https://github.com/Mindbeam-AI/Litespark-aws-marketplace/blob/main/prepare_dataset/upload_to_s3.py).
 
 ### Data configuration
 - Under Input data configuration, the default is only one channel named "train".
