@@ -17,8 +17,8 @@ To use Litespark LLM Pre-training, make sure that
 - Select Litespark - LLM Pre-Training, click on Actions > Create training job.
 - In Job settings, give a Job name, select an appropriate IAM role that has the *AmazonSageMakerFullAccess* IAM policy attached (e.g. *SageMaker-SageMakerOps*).
 - In Algorithm source, select "An algorithm subscription from AWS Marketplace".
-- Under "Choose an algorithm subscription", select Mindbeam: Pre-Training LLM Optimization Consultation.
-- Under "Resource configuration", select either `ml.p4de.24xlarge` or `ml.p5.48xlarge` as instance type, instance count 1, and 1 GB additional storage volume per instance.
+- Under "Choose an algorithm subscription", select Litespark - LLM Pre-Training.
+- Under "Resource configuration", select either `ml.p4de.24xlarge` or `ml.p5.48xlarge` or `ml.p5en.48xlarge` as instance type, instance count 1 (for single-node training) or more (for multi-node training), and 1 GB additional storage volume per instance.
 - Optionally, select a "Keep alive period" in between 1 minutes and 60 minutes.
 - Under "Encryption key", select "No Custom Encryption".
 - Select an appropriate "Stopping condition" that does not prematurely stop the run.
@@ -52,7 +52,7 @@ Any LLM pre-training dataset from Hugging Face can be prepared for training with
 ### Data configuration
 - Under Input data configuration, the default is only one channel named "train".
 - Choose "Data source" as S3, "S3 data type" as S3Prefix, "S3 data distribution type" as FullyReplicated, and provide "S3 location" to the prepared data in your S3 bucket.
-- Optionally, provide S3 location or a local directory for saving intermediate checkpoints. The algorithm generates checkpoints at every 4000 steps.
+- Optionally, provide S3 location or a local directory for saving intermediate checkpoints.
 - Provide a "S3 output path" to save the final checkpoint.
 
 After the above steps are completed, click on "Create training job". 
@@ -61,5 +61,5 @@ After the above steps are completed, click on "Create training job".
 - After a training job is created, you can view the progress at Amazon SageMaker AI > Training jobs.
 - Click on the job name to view the details.
 - View metrics in the Monitor section. The following metrics are shown: CPU Utilization, GPU Utilization, Memory Utilization, Disk Utilization, GPU Memory Utilization, batches_per_sec (per GPU), flops_per_sec (per GPU), (training) loss, samples_per_sec (per GPU), mfu (model flops utilization per GPU), tokens_per_sec (per GPU).
-- To view logs in Cloud Watch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
+- To view logs in CloudWatch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
 - Checkpoints and outputs will be saved in your specified S3 bucket as safetensors.
