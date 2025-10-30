@@ -4,7 +4,7 @@ Mindbeam's Litespark is an advanced algorithm that offers accelerated pre-traini
 ## Prerequisites
 To use Litespark LLM Pre-training, make sure that
 - Your IAM role has *AmazonSageMakerFullAccess*, *AmazonS3FullAccess*, *CloudWatchEventsFullAccess*, *AmazonElasticContainerRegistryPublicFullAccess*, *AmazonEC2ContainerRegistryFullAccess*. These are combined into the role [*SageMaker-SageMakerOps*](arn:aws:iam::975050170529:role/service-role/SageMaker-SageMakerOps).
-- Either your AWS account has a subscription to [Litespark - LLM Pre-Training](https://aws.amazon.com/marketplace/pp/prodview-hsoxija73l6xs?applicationId=AWSMPContessa&ref_=beagle&sr=0-1).
+- Either your AWS account has a subscription to [Litespark - LLM Pre-Training](https://aws.amazon.com/marketplace/pp/prodview-q76fxekgwhezc?sr=0-1&ref_=beagle&applicationId=AWSMPContessa).
 - Or your IAM role has these three permissions and you have authority to make AWS Marketplace subscriptions in the AWS account used:
   - *aws-marketplace:ViewSubscriptions*
   - *aws-marketplace:Unsubscribe*
