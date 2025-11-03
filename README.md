@@ -60,6 +60,6 @@ After the above steps are completed, click on "Create training job".
 ## Monitor a training job
 - After a training job is created, you can view the progress at Amazon SageMaker AI > Training jobs.
 - Click on the job name to view the details.
-- View metrics in the Monitor section. The following metrics are shown: CPU Utilization, GPU Utilization, Memory Utilization, Disk Utilization, GPU Memory Utilization, batches_per_sec (per GPU), flops_per_sec (per GPU), (training) loss, samples_per_sec (per GPU), mfu (model flops utilization per GPU), tokens_per_sec (per GPU).
+- View metrics in the Monitor section. The following metrics are shown: CPU Utilization, GPU Utilization, Memory Utilization, Disk Utilization, GPU Memory Utilization, (training) lm_loss, tokens_per_sec (K), tokens_per_sec_per_gpu (K), model_tflops_per_gpu, lr (learning rate), time_per_iteration (ms).
 - To view logs in CloudWatch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
 - Checkpoints and outputs will be saved in your specified S3 bucket as safetensors.
