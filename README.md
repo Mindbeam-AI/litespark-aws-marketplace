@@ -36,7 +36,7 @@ To use Litespark LLM Pre-training, make sure that
 - SEQ_LEN: training sequence length, default is 4096.
 - VOCAB_SIZE: vocabulary size, must be consistent with tokenizer and data preparation.
 - TOKENIZER: default is mindbeam-ai/Litespark. To use custom tokenizers, host the tokenizer in your S3 bucket path `s3://<my-bucket>/<org-name>/<model-name>`. When creating the training job, under `Input data configuration` click on `Add channel`, then put channel name `tokenizer`, Data source select `S3`, S3 data type select `S3prefix`, S3 data distribution type select `FullyReplicated`, and then for S3 location put `s3://<my-bucket>/<org-name>/<model-name>`. 
-- LEARNING_RATE: maximum learning rate with a cosine scheduler, default is 1.6e-3.
+- LEARNING_RATE: maximum learning rate with a cosine scheduler, default is 1.2e-3.
 - MAX_STEPS: maximum number of steps for pre-training, default is 10000.
 - WARMUP_STEPS: number of steps required to reach the maximum learning rate, default is 500.
 - WEIGHT_DECAY: adds a penalty term to the loss function that reduces large weights, default is 0.01.
