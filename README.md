@@ -69,7 +69,7 @@ The output .tar.gz archive contains both the final model files and a wandb direc
 - Copy the final model to local directory: `aws s3 cp <s3 uri> /local/directory/model.tar.gz`
 - `cd /local/directory`
 - Unzip the model files: `tar -xvzf model.tar.gz`
-- Sync with wandb dashboard: wandb sync /path/to/wandb/<filename>.wandb`
+- Sync with wandb dashboard: `wandb sync /path/to/wandb/<filename>.wandb`
 - Extract the wandb url from the above command's output
 - The dashboard shows throughput metrics (e.g. tokens per sec, model tflops per gpu, time per iteration etc.) as well as system metrics (gpu power, gpu memory, gpu utilization etc.)
 - To calculate energy consumption of a training run, use the `energy_calculator.py` script.
