@@ -63,3 +63,13 @@ After the above steps are completed, click on "Create training job".
 - View metrics in the Monitor section. The following metrics are shown: CPU Utilization, GPU Utilization, Memory Utilization, Disk Utilization, GPU Memory Utilization, (training) lm_loss, tokens_per_sec (K), tokens_per_sec_per_gpu (K), model_tflops_per_gpu, lr (learning rate), time_per_iteration (ms).
 - To view logs in CloudWatch, go to Monitor > View logs. In the new page, go to Log streams, and select the appropriate log stream.
 - Checkpoints and outputs will be saved in your specified S3 bucket as safetensors.
+
+## View metrics
+The output .tar.gz archive contains both the final model files and a wandb directory that contains the compressed data points for W&B dashboard. Once uncompressed, the contents can be pushed to W&B.
+- Copy the final model to local directory: `aws s3 cp <s3 uri> /local/directory/model.tar.gz`
+- `cd /local/directory`
+- Unzip the model files: `tar -xvzf model.tar.gz`
+- Sync with wandb dashboard: wandb sync /path/to/wandb/<filename>.wandb`
+- Extract the wandb url from the above command's output
+- The dashboard shows throughput metrics (e.g. tokens per sec, model tflops per gpu, time per iteration etc.) as well as system metrics (gpu power, gpu memory, gpu utilization etc.)
+- To calculate energy consumption of a training run, use the `energy_calculator.py` script.
